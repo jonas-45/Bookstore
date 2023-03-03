@@ -1,6 +1,7 @@
 import React from 'react';
 import Book from '../components/Book';
 import { v4 as uuidv4 } from 'uuid';
+import AddBook from '../components/AddBook';
 
 export default function Books() {
   const booksArr = [
@@ -25,6 +26,8 @@ export default function Books() {
       {booksArr.map((book) => (
         <Book key={book.id} book={book}/>
       ))}
+      <hr className='horizontal-line'></hr>
+      <AddBook />
     </div>
   )
 }
