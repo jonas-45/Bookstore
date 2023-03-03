@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Categories() {
   return (
-    <div>Categories</div>
+    <div className='category-wrapper'>
+      <p>Categories page</p>
+    </div>
   )
 }
