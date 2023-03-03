@@ -40,7 +40,7 @@ li {
 .book {
   border: 1px solid #eaeaea;
   background-color: #fff;
-  padding: 30px;
+  padding: 20px;
   margin: 10px 10%;
 }
 
@@ -53,8 +53,10 @@ h2 {
 }
 
 .remove {
+  display: block;
   color: #777;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .category-wrapper {
@@ -65,7 +67,7 @@ h2 {
 }
 
 .active {
-  color: #551A9A;
+  color: #551a9a;
 }
 
 .check-status-btn {
@@ -78,8 +80,8 @@ h2 {
 }
 
 .horizontal-line {
-  border: none; 
-  border-bottom: 1px solid gainsboro; 
+  border: none;
+  border-bottom: 1px solid gainsboro;
   margin: 40px 10%;
 }
 
@@ -87,10 +89,6 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-}
-
-.book-field {
-  flex-basis: calc(33%-10px);
 }
 
 .title-field {
