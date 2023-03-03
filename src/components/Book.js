@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function Book({booksArr}) {
-  const [title, author] = booksArr;
+export default function Book({book}) {
+  console.log('book object', book);
+  const {title, author} = book;
   return (
-    <div>
+    <div className='book'>
       <h2>{title}</h2>
-      <label>{author}</label>
-      <button type='button'>Remove </button>
+      <label className='author'>{author}</label><br/><br/>
+      <label className='remove'>Remove </label>
     </div>
   )
 }

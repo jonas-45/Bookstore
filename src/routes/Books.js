@@ -1,24 +1,30 @@
-import React from 'react'
-import Book from '../components/Book'
+import React from 'react';
+import Book from '../components/Book';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Books() {
   const booksArr = [
     {
+      id: uuidv4(),
       title: 'The Hunger Games',
-      suthor: 'Suzanne Collins'
+      author: 'Suzanne Collins'
     },
     {
+      id: uuidv4(),
       title: 'Dunes',
-      suthor: 'Frank Herbert'
+      author: 'Frank Herbert'
     },
     {
+      id: uuidv4(),
       title: 'Capital in The Twenty First Centurey',
-      suthor: 'Suzanne Collins'
+      author: 'Suzanne Collins'
     }
   ]
   return (
     <div>
-      <Book />
+      {booksArr.map((book) => (
+        <Book key={book.id} book={book}/>
+      ))}
     </div>
   )
 }
