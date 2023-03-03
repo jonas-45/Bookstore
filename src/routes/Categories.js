@@ -3,7 +3,7 @@ import React from 'react'
 export default function Categories() {
   return (
     <div className='category-wrapper'>
-      <p>Categories page</p>
+      <button type='button' className='check-status-btn'>Check status </button>
     </div>
   )
 }
