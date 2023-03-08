@@ -27,7 +27,7 @@ li {
 
 .logo {
   font-size: 25px;
-  color: #0290FF;
+  color: #0290ff;
   font-weight: bolder;
 }
 
@@ -50,11 +50,11 @@ h2 {
 }
 
 .category {
-  color: #777;
+  color: #121212;
 }
 
 .author {
-  color: #777;
+  color: #4386bf;
 }
 
 .book-actions-container {
@@ -65,7 +65,7 @@ h2 {
 }
 
 .book-actions {
-  color: #6bb6f0;
+  color: #4386bf;
   cursor: pointer;
 }
 
@@ -81,7 +81,7 @@ h2 {
 }
 
 .active {
-  color: #551a9a;
+  color: #121212;
 }
 
 .check-status-btn {
