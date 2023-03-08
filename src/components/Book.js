@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Book({ book }) {
-  const { title, author, category } = book;
+  const { title, author } = book;
   return (
     <div className="book">
-      <span className="category">{category}</span>
+      <span className="category">To be added later</span>
       <h2>{title}</h2>
       <span className="author">{author}</span>
       <br />
