@@ -46,6 +46,11 @@ li {
 
 h2 {
   margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.category {
+  color: #777;
 }
 
 .author {
