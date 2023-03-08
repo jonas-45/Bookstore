@@ -77,6 +77,8 @@ h2 {
 
 .category-wrapper {
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -86,8 +88,14 @@ h2 {
   color: #121212;
 }
 
+.status-display {
+  font-size: 20px;
+  color: #0290ff;
+}
+
 .check-status-btn {
   padding: 10px;
+  cursor: pointer;
 }
 
 .new-book {

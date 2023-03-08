@@ -31,7 +31,7 @@ const booksSlice = createSlice({
       ...state,
       books: [...state.books, action.payload],
     }),
-    removeBook: (state, action) => {     
+    removeBook: (state, action) => {
       const id = action.payload;
       return {
         ...state,

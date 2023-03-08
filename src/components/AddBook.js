@@ -9,7 +9,7 @@ const AddBook = () => {
   const booksArr = useSelector((state) => state.books.books);
 
   const newBook = {
-    id: `item_id${booksArr.length + 1}`,
+    id: `item${booksArr.length + 1}`,
     title,
     author,
   };

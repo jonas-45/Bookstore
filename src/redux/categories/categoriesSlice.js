@@ -11,7 +11,7 @@ const categoriesSlice = createSlice({
   reducers: {
     checkStatus: (state) => ({
       ...state,
-      status: 'Under construction',
+      status: 'Under construction2',
     }),
   },
 });
