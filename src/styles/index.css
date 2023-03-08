@@ -27,7 +27,7 @@ li {
 
 .logo {
   font-size: 25px;
-  color: #0e59eff3;
+  color: #0290FF;
   font-weight: bolder;
 }
 
@@ -57,11 +57,20 @@ h2 {
   color: #777;
 }
 
-.remove {
-  display: block;
-  color: #777;
+.book-actions-container {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.book-actions {
+  color: #6bb6f0;
   cursor: pointer;
-  margin-top: 20px;
+}
+
+.action-separator {
+ opacity: 0.5;
 }
 
 .category-wrapper {

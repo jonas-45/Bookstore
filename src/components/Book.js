@@ -9,7 +9,13 @@ export default function Book({ book }) {
       <h2>{title}</h2>
       <span className="author">{author}</span>
       <br />
-      <span className="remove">Remove </span>
+      <div className="book-actions-container">
+        <p className="book-actions">Comments</p>
+        <p className="action-separator">|</p>
+        <p className="book-actions">Remove </p>
+        <p className="action-separator">|</p>
+        <p className="book-actions">Edit</p>
+      </div>
     </div>
   );
 }
