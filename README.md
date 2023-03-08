@@ -61,6 +61,7 @@ $ npm start
 
 - React routing added to navigation menu
 - Displays list of books with their authors
+- Users can add new books to book collection
 
 <!-- AUTHORS -->
 
@@ -78,7 +79,6 @@ $ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add a form to enable users add their own books
 - [ ] Allows users to edit and delete books
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
