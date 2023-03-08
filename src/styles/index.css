@@ -67,6 +67,8 @@ h2 {
 .book-actions {
   color: #4386bf;
   cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 
 .action-separator {
