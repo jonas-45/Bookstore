@@ -12,12 +12,14 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+- [🛠 Built With](#built-with)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
     - [Key Features](#key-features)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [⭐️ Show your support](#support)
-
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -26,7 +28,22 @@
 
 Bookstore is a webapp that displays books and also allows users to add and remove their books.
 
-## Setup
+## 🛠 Built With <a name="built-with">Build With</a>
+ >React
+ >Redux
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Please find below a link to the live demo of the project
+<a href="#">[Live Demo coming soon]</a>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+Vscode was used in developing this project but you can use any IDE that you are confortable with such as sublime etc.
 
 ### Clone this repository
 
@@ -46,14 +63,6 @@ $ npm run start # this will make webpack watching for your changes in code
 $ npm start
 ```
 
-## Built With
-
-- React
-
-## Deployment 
-
-<a href="#">Live demo coming soon</a>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,12 +70,13 @@ $ npm start
 
 - React routing added to navigation menu
 - Displays list of books with their authors
+- Users can add new books to book collection
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Jonas-45**
+👤 **Wullah Jonas Nuta**
 
 - GitHub: [@jonas-45](https://github.com/jonas-45)
 - Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
@@ -78,7 +88,6 @@ $ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add a form to enable users add their own books
 - [ ] Allows users to edit and delete books
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

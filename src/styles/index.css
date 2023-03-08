@@ -27,7 +27,7 @@ li {
 
 .logo {
   font-size: 25px;
-  color: #0e59eff3;
+  color: #0290ff;
   font-weight: bolder;
 }
 
@@ -46,32 +46,56 @@ li {
 
 h2 {
   margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.category {
+  color: #121212;
 }
 
 .author {
-  color: #777;
+  color: #4386bf;
 }
 
-.remove {
-  display: block;
-  color: #777;
+.book-actions-container {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.book-actions {
+  color: #4386bf;
   cursor: pointer;
-  margin-top: 20px;
+  border: none;
+  background-color: #fff;
+}
+
+.action-separator {
+  opacity: 0.5;
 }
 
 .category-wrapper {
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
 .active {
-  color: #551a9a;
+  color: #121212;
+}
+
+.status-display {
+  font-size: 20px;
+  color: #0290ff;
 }
 
 .check-status-btn {
   padding: 10px;
+  cursor: pointer;
 }
 
 .new-book {
