@@ -31,11 +31,11 @@ const booksSlice = createSlice({
       ...state,
       books: [...state.books, action.payload],
     }),
-    removeBook: (state, action) => {
-      const { id } = action.payload;
+    removeBook: (state, action) => {     
+      const id = action.payload;
       return {
         ...state,
-        books: state.books.filter((book) => (book.id !== id)),
+        books: state.books.filter((book) => (book.item_id !== id)),
       };
     },
   },

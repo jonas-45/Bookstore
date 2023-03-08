@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 
 export default function Book({ book }) {
-  const { title, author } = book;
+  const { item_id, title, author } = book;
+  const dispatch = useDispatch();
+
   return (
     <div className="book">
       <span className="category">To be added later</span>
@@ -10,11 +14,11 @@ export default function Book({ book }) {
       <span className="author">{author}</span>
       <br />
       <div className="book-actions-container">
-        <p className="book-actions">Comments</p>
+        <button type="button" className="book-actions">Comments</button>
         <p className="action-separator">|</p>
-        <p className="book-actions">Remove </p>
+        <button type="button" className="book-actions" onClick={() => dispatch(removeBook(item_id))}>Remove</button>
         <p className="action-separator">|</p>
-        <p className="book-actions">Edit</p>
+        <button type="button" className="book-actions">Edit</button>
       </div>
     </div>
   );
@@ -22,6 +26,7 @@ export default function Book({ book }) {
 
 Book.propTypes = {
   book: PropTypes.shape({
+    item_id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
     category: PropTypes.string,
