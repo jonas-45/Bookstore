@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -8,15 +8,18 @@ const AddBook = () => {
   const [author, setAuthor] = useState('');
   const booksArr = useSelector((state) => state.books.books);
 
+  const category = 'New category';
+
   const newBook = {
-    id: `item${booksArr.length + 1}`,
+    item_id: `item${booksArr.length + 1}`,
     title,
     author,
+    category,
   };
 
   const submitBook = () => {
     if (title && author) {
-      dispatch(addBook(newBook));
+      dispatch(postBook(newBook));
       setTitle('');
       setAuthor('');
     }

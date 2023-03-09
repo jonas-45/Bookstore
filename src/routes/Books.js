@@ -11,15 +11,16 @@ export default function Books() {
 
   useEffect(() => {
     dispatch(getAllBooks());
-  });
+  }, [dispatch]);
 
   return (
     <div>
       {books.map((book) => {
-        const itemId = book[0];
-        const data = book[1][0];
-        const bookData = { ...data, itemId };
-        return <Book key={itemId} book={bookData} />;
+        // const itemId = book[0];
+        // const data = book[1][0];
+        // const bookData = { ...data, itemId };
+        console.log('BOOK BOOK BOOK: ', book);
+        return <Book key={book.itemId} book={book} />;
       })}
       <hr className="horizontal-line" />
       <AddBook />
