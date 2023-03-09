@@ -4,12 +4,14 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
 export default function Book({ book }) {
-  const { itemId, title, author } = book;
+  const {
+    itemId, title, author, category,
+  } = book;
   const dispatch = useDispatch();
 
   return (
     <div className="book">
-      <span className="category">To be added later</span>
+      <span className="category">{category}</span>
       <h2>{title}</h2>
       <span className="author">{author}</span>
       <br />

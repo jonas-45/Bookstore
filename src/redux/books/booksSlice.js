@@ -3,7 +3,8 @@ import BOOKSTORE_BASE_URL from '../../Consts';
 
 const initialState = {
   isLoading: true,
-  books: [
+  books: [],
+  extrabooks: [
     {
       itemId: 'item1',
       title: 'The Great Gatsby',
@@ -25,12 +26,9 @@ const initialState = {
   ],
 };
 
-
-export const getAllBooks = createAsyncThunk('bookstore', () => {
-  return fetch(BOOKSTORE_BASE_URL + "/books")
-                  .then((resp) => resp.json())
-                  .catch((error) => console.log(error));
-});
+export const getAllBooks = createAsyncThunk('bookstore', () => fetch(`${BOOKSTORE_BASE_URL}/books`)
+  .then((resp) => resp.json())
+  .catch((error) => error));
 
 const booksSlice = createSlice({
   name: 'books',
@@ -49,16 +47,12 @@ const booksSlice = createSlice({
     },
   },
   extraReducers: {
-    [getAllBooks.pending]: (state) => {
-      return state;
-    },
-    [getAllBooks.fulfilled]: (state, action) => {
-      return {...state, isLoading: false, books: action.payload};
-    },
-    [getAllBooks.rejected]: (state) => {
-      return state;
-    }
-  }
+    [getAllBooks.pending]: (state) => state,
+    [getAllBooks.fulfilled]: (state, action) => (
+      { ...state, isLoading: false, books: Object.entries(action.payload) }
+    ),
+    [getAllBooks.rejected]: (state) => state,
+  },
 });
 
 // const booksSlice = createSlice({
