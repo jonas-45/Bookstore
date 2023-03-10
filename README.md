@@ -73,7 +73,8 @@ $ npm start
 - Use state and props.
 - Use react-redux and redux toolkit for state management.
 - Use store, actions and reducers in React.
-- Connect to Bookstore API via Redux toolkit to fetch, display, add and remove books.
+- Connect to Bookstore API via Redux toolkit.
+- Use fetch API to fetch, display, add and remove books.
 
 <!-- AUTHORS -->
 
