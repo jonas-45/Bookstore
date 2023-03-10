@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { postBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const booksArr = useSelector((state) => state.books.books);
 
-  const category = 'New category';
+  const category = ['Fiction', 'Action', 'Comedy', 'Adventure', 'Crime', 'Classics', 'Fairy Tale', 'Horror', 'Fantasy'];
+  const randomNumber = Math.floor(Math.random() * 9);
 
   const newBook = {
-    item_id: `item${booksArr.length + 1}`,
+    item_id: uuidv4(),
     title,
     author,
-    category,
+    category: category[randomNumber],
   };
 
   const submitBook = () => {

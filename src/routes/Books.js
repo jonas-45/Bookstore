@@ -15,13 +15,7 @@ export default function Books() {
 
   return (
     <div>
-      {books.map((book) => {
-        // const itemId = book[0];
-        // const data = book[1][0];
-        // const bookData = { ...data, itemId };
-        console.log('BOOK BOOK BOOK: ', book);
-        return <Book key={book.itemId} book={book} />;
-      })}
+      {books.map((book) => (<Book key={book.itemId} book={book} />))}
       <hr className="horizontal-line" />
       <AddBook />
     </div>

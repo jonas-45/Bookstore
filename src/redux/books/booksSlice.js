@@ -9,7 +9,7 @@ const initialState = {
 export const getAllBooks = createAsyncThunk('bookstore', () => {
   const books = fetch(`${BOOKSTORE_BASE_URL}/books`)
     .then((resp) => resp.json())
-    .catch((error) => console.log(error));
+    .catch(() => false);
 
   return books;
 });
@@ -34,35 +34,32 @@ export const removeBook = createAsyncThunk('removebook', (bookId) => (fetch(`${B
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (action) => {
-      postBook(action.payload);
-      // ...state,
-      // books: [...state.books, action.payload],
-    },
-    removeBook: (state, action) => {
-      const id = action.payload;
-      return {
-        ...state,
-        books: state.books.filter((book) => (book.itemId !== id)),
-      };
-    },
-  },
+  reducers: {},
   extraReducers: {
     [getAllBooks.fulfilled]: (state, action) => {
       const books = action.payload;
       const booksArr = Object.keys(books).map((bookId) => ({
-        itemId: bookId,
+        id: bookId,
         ...books[bookId][0],
       }));
       return { ...state, isLoading: false, books: booksArr };
     },
     [postBook.fulfilled]: (state, action) => {
-      state.books.push(action.payload);
+      const { item_id: id, ...rest } = action.payload;
+      const addedBook = {
+        id,
+        ...rest,
+      };
+      state.books.push(addedBook);
     },
-    // [postBook.pending]: (state) => state,
-    // [postBook.fulfilled]: () => (getAllBooks()),
-    // [postBook.rejected]: (state) => state,
+    [removeBook.fulfilled]: (state, action) => {
+      const id = action.payload;
+      const filteredBooks = state.books.filter((book) => (book.id !== id));
+      return {
+        ...state,
+        books: filteredBooks,
+      };
+    },
   },
 });
 
@@ -84,5 +81,4 @@ const booksSlice = createSlice({
 //   },
 // });
 
-export const { addBook, removeBook } = booksSlice.actions;
 export default booksSlice.reducer;
