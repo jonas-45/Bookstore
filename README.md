@@ -43,7 +43,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-Vscode was used in developing this project but you can use any IDE that you are confortable with such as sublime etc.
+- [ ] <a href="https://code.visualstudio.com/">Visual studio code</a>: A source code editor.
 
 ### Clone this repository
 
@@ -54,7 +54,7 @@ $ cd bookstore
 ### Run project
 
 ```bash
-$ npm install
+$ npm install #To install dependencies for the project
 $ npm run start # this will make webpack watching for your changes in code
 ```
 
@@ -68,9 +68,12 @@ $ npm start
 
 ### Key Features <a name="key-features"></a>
 
-- React routing added to navigation menu
-- Displays list of books with their authors
-- Users can add new books to book collection
+- React routing added to navigation menu.
+- Use functional Component.
+- Use state and props.
+- Use react-redux and redux toolkit for state management.
+- Use store, actions and reducers in React.
+- Connect to Bookstore API via Redux toolkit to fetch, display, add and remove books.
 
 <!-- AUTHORS -->
 
@@ -88,7 +91,8 @@ $ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Allows users to edit and delete books
+- [ ] Add book edit functionality
+- [ ] Add and display comments for each book item
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
