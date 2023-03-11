@@ -12,9 +12,17 @@ export default function Books() {
     dispatch(getAllBooks());
   }, [dispatch]);
 
+  const statusPercentages = [64, 8, 0];
+
   return (
-    <div>
-      {books.map((book) => (<Book key={book.itemId} book={book} />))}
+    <div className="book-cover">
+      {books.map((book, index) => (
+        <Book
+          key={book.itemId}
+          book={book}
+          percent={statusPercentages[index] ? statusPercentages[index] : 0}
+        />
+      ))}
       <hr className="horizontal-line" />
       <AddBook />
     </div>
