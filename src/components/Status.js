@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Status = () => (
-  <div>
-    <div className="oval" />
+  <div className="status-wrapper">
+    <div className="oval">status</div>
   </div>
 );
 
