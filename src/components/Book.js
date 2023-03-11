@@ -5,7 +5,7 @@ import { removeBook } from '../redux/books/booksSlice';
 import Status from './Status';
 import Progress from './Progress';
 
-export default function Book({ book }) {
+export default function Book({ book, percent }) {
   const dispatch = useDispatch();
   const {
     id, title, author, category,
@@ -28,9 +28,9 @@ export default function Book({ book }) {
       </div>
 
       <div className="status-and-progress">
-        <Status />
-        <div>|</div>
-        <Progress />
+        <Status percent={percent} />
+        <div className="separator" />
+        <Progress chapter="Chapter1" />
       </div>
     </div>
   );
@@ -43,4 +43,5 @@ Book.propTypes = {
     author: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  percent: PropTypes.number.isRequired,
 };
