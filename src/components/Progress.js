@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const Progress = () => {
-  return (
+const Progress = () => (
+  <div className="progress-wrapper">
     <div>Progress</div>
-  )
-}
+  </div>
 
-export default Progress
+);
+
+export default Progress;
