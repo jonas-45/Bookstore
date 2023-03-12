@@ -31,13 +31,14 @@
 Bookstore is a webapp that displays books and also allows users to add and remove their books.
 
 ## 🛠 Built With <a name="built-with">Build With</a>
- >React
- >Redux
+ - React
+ - Redux
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Please find below a link to the live demo of the project
-<a href="https://book-store-gsq2.onrender.com">[Live Demo]</a>
+- Click on the link below to the live demo of the project
+
+  <a href="https://book-store-gsq2.onrender.com">[Live Demo]</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
