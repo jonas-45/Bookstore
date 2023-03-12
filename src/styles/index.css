@@ -278,8 +278,41 @@ h2 {
     padding-bottom: 10%;
   }
 
+  .status-and-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .form {
     flex-direction: column;
     row-gap: 15px;
+  }
+
+  .submit-btn {
+    cursor: pointer;
+    width: 12rem;
+    border-radius: 3px;
+    background-color: var(--azure);
+    border: none;
+    color: var(--white-two);
+    padding: 10px 1px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .title-field {
+    width: 100%;
+  }
+
+  .author {
+    color: var(--cool-blue);
+    font-family: 'RobotoSlab', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    width: 100%;
   }
 }
