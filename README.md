@@ -35,7 +35,7 @@ Bookstore is a webapp that displays books and also allows users to add and remov
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Please find below a link to the live demo of the project
-<a href="#">[Live Demo coming soon]</a>
+<a href="https://book-store-gsq2.onrender.com">[Live Demo]</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
