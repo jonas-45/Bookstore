@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
+import Status from './Status';
+import Progress from './Progress';
 
-export default function Book({ book }) {
+export default function Book({ book, percent }) {
   const dispatch = useDispatch();
   const {
     id, title, author, category,
@@ -11,16 +13,24 @@ export default function Book({ book }) {
 
   return (
     <div className="book">
-      <span className="category">{category}</span>
-      <h2>{title}</h2>
-      <span className="author">{author}</span>
-      <br />
-      <div className="book-actions-container">
-        <button type="button" className="book-actions">Comments</button>
-        <p className="action-separator">|</p>
-        <button type="button" className="book-actions" onClick={() => dispatch(removeBook(id))}>Remove</button>
-        <p className="action-separator">|</p>
-        <button type="button" className="book-actions">Edit</button>
+      <div className="book-details">
+        <span className="category">{category}</span>
+        <h2>{title}</h2>
+        <span className="author">{author}</span>
+        <br />
+        <div className="book-actions-container">
+          <button type="button" className="book-actions">Comments</button>
+          <p className="action-separator">|</p>
+          <button type="button" className="book-actions" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <p className="action-separator">|</p>
+          <button type="button" className="book-actions">Edit</button>
+        </div>
+      </div>
+
+      <div className="status-and-progress">
+        <Status percent={percent} />
+        <div className="separator" />
+        <Progress chapter="Chapter1" />
       </div>
     </div>
   );
@@ -33,4 +43,5 @@ Book.propTypes = {
     author: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  percent: PropTypes.number.isRequired,
 };

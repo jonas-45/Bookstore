@@ -41,6 +41,7 @@ const booksSlice = createSlice({
       const booksArr = Object.keys(books).map((bookId) => ({
         id: bookId,
         ...books[bookId][0],
+
       }));
       return { ...state, isLoading: false, books: booksArr };
     },
